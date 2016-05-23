@@ -7,6 +7,11 @@ import java.util.List;
 
 public class Main {
 
+    /**
+     * Get jsp file list including "Case" word.
+     *
+     * @param args directory root
+     */
     public static void main(String[] args) {
         File root = new File(args[0]);
         List<String> jspFileList = new ArrayList<>();
@@ -40,6 +45,9 @@ public class Main {
                 if(f.getName().contains("Case") && f.getName().contains(".jsp")) {
                     list.add(root.getName() + "/" + f.getName());
                 }
+//                if(f.getName().endsWith(".jsp")) {
+//                    list.add(root.getName() + "/" + f.getName());
+//                }
             }
         }
     }
